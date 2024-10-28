@@ -8,7 +8,9 @@ import java.util.Scanner;
 public class FileExplorer {
 
     private static List<String> foundFiles = new ArrayList<>();
-
+    public static List<String> getFoundFiles(){
+    	return foundFiles;
+    }
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -38,7 +40,7 @@ public class FileExplorer {
 
     }
 
-    private static void searchFile(File directory, String fileName, boolean caseInsensitive) {
+    public static void searchFile(File directory, String fileName, boolean caseInsensitive) {
         File[] files = directory.listFiles();
 
         if (files != null) {
